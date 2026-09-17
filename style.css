@@ -265,4 +265,29 @@ body {
         padding: 13px 27px;
     }
 }
+css
+/* ------------------------------------------
+   OPEN INVITATION ANIMATION
+   ------------------------------------------ */
+
+.opening {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease,
+        transform 0.8s ease;
+}
+
+.opening.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+
+    pointer-events: none;
+}
+```
+
 ```
