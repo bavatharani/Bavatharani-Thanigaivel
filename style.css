@@ -1,0 +1,268 @@
+```css
+/* ==========================================
+   BAVATHARANI & THANIGAIVEL
+   WEDDING INVITATION
+   ========================================== */
+
+
+/* ------------------------------------------
+   RESET
+   ------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------
+   COLORS
+   ------------------------------------------ */
+
+:root {
+    --cream: #faf5ec;
+    --paper: #fffdf8;
+
+    --terracotta: #b86f58;
+    --gold: #b49768;
+
+    --brown: #59473d;
+    --dark: #342923;
+}
+
+
+/* ------------------------------------------
+   PAGE
+   ------------------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--cream);
+
+    color: var(--dark);
+
+    font-family: "Montserrat", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* ------------------------------------------
+   OPENING SCREEN
+   ------------------------------------------ */
+
+.opening {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(184, 111, 88, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(180, 151, 104, 0.12),
+            transparent 30%
+        ),
+        var(--cream);
+}
+
+
+/* ------------------------------------------
+   SMALL DECORATIVE BORDER
+   ------------------------------------------ */
+
+.opening::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border: 1px solid
+        rgba(180, 151, 104, 0.35);
+
+    pointer-events: none;
+}
+
+
+/* ------------------------------------------
+   OPENING CONTENT
+   ------------------------------------------ */
+
+.opening-content {
+    position: relative;
+
+    width: min(700px, 100%);
+
+    padding: 70px 30px;
+}
+
+
+/* ------------------------------------------
+   INTRO TEXT
+   ------------------------------------------ */
+
+.opening-small {
+    margin-bottom: 22px;
+
+    color: var(--terracotta);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* ------------------------------------------
+   NAMES
+   ------------------------------------------ */
+
+.opening h1 {
+    color: var(--dark);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 10vw, 105px);
+
+    font-weight: 500;
+
+    line-height: 0.85;
+}
+
+
+/* Ampersand */
+
+.opening h1 span {
+    display: block;
+
+    margin: 15px 0;
+
+    color: var(--gold);
+
+    font-size: 45px;
+
+    font-style: italic;
+}
+
+
+/* ------------------------------------------
+   MESSAGE
+   ------------------------------------------ */
+
+.opening-message {
+    margin-top: 35px;
+
+    color: var(--brown);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+}
+
+
+/* ------------------------------------------
+   BUTTON
+   ------------------------------------------ */
+
+#enterButton {
+    margin-top: 40px;
+
+    padding: 14px 32px;
+
+    color: var(--dark);
+
+    background: transparent;
+
+    border: 1px solid var(--gold);
+
+    cursor: pointer;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+#enterButton:hover {
+    color: white;
+
+    background: var(--terracotta);
+
+    border-color: var(--terracotta);
+
+    transform: translateY(-2px);
+}
+
+
+/* ------------------------------------------
+   MOBILE
+   ------------------------------------------ */
+
+@media (max-width: 600px) {
+
+    .opening {
+        padding: 20px;
+    }
+
+    .opening::before {
+        inset: 12px;
+    }
+
+    .opening-content {
+        padding: 50px 20px;
+    }
+
+    .opening-small {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .opening h1 {
+        font-size: clamp(55px, 17vw, 80px);
+    }
+
+    .opening h1 span {
+        font-size: 35px;
+        margin: 12px 0;
+    }
+
+    .opening-message {
+        font-size: 20px;
+    }
+
+    #enterButton {
+        padding: 13px 27px;
+    }
+}
+```
