@@ -1,39 +1,16 @@
-```javascript
-// ==========================================
-// BAVATHARANI & THANIGAIVEL
-// WEDDING INVITATION
-// ==========================================
+document.addEventListener("DOMContentLoaded", function () {
 
+    const enterButton = document.getElementById("enterButton");
+    const opening = document.querySelector(".opening");
 
-document.addEventListener("DOMContentLoaded", () => {
+    if (enterButton && opening) {
 
-    const enterButton =
-        document.getElementById("enterButton");
+        enterButton.addEventListener("click", function () {
 
-    const opening =
-        document.querySelector(".opening");
+            opening.classList.add("hide");
 
-    const invitation =
-        document.getElementById("invitation");
+        });
 
-
-    // --------------------------------------
-    // OPEN INVITATION
-    // --------------------------------------
-
-    enterButton.addEventListener("click", () => {
-
-        opening.classList.add("hide");
-
-        setTimeout(() => {
-
-            invitation.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }, 600);
-
-    });
+    }
 
 });
-```
